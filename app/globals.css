@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Fondo principal más cálido */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 26.9%;
+
+    /* Cards con un ligero tinte azul */
+    --card: 210 40% 98%;
+    --card-foreground: 215 25% 26.9%;
+ 
+    --popover: 210 40% 98%;
+    --popover-foreground: 215 25% 26.9%;
+ 
+    /* Azul corporativo profesional - inspirado en empresas chilenas */
+    --primary: 210 100% 45%;
+    --primary-foreground: 210 40% 98%;
+ 
+    /* Azul más suave para elementos secundarios */
+    --secondary: 210 30% 93%;
+    --secondary-foreground: 215 25% 26.9%;
+ 
+    /* Grises más cálidos */
+    --muted: 210 30% 94%;
+    --muted-foreground: 215.4 20% 52%;
+ 
+    /* Verde corporativo para elementos de éxito */
+    --accent: 142 69% 58%;
+    --accent-foreground: 210 40% 98%;
+ 
+    /* Rojo más elegante para errores */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Bordes más sutiles */
+    --border: 210 20% 89%;
+    --input: 210 20% 89%;
+    --ring: 210 100% 45%;
+ 
+    /* Radio más suave */
+    --radius: 8px;
+
+    /* Variables adicionales para gráficos */
+    --chart-1: 210 100% 45%;
+    --chart-2: 142 69% 58%;
+    --chart-3: 31 81% 56%;
+    --chart-4: 262 83% 58%;
+    --chart-5: 0 85% 60%;
+  }
+ 
+  .dark {
+    /* Fondo oscuro más azulado */
+    --background: 215 28% 17%;
+    --foreground: 210 20% 98%;
+ 
+    --card: 215 28% 17%;
+    --card-foreground: 210 20% 98%;
+ 
+    --popover: 215 28% 17%;
+    --popover-foreground: 210 20% 98%;
+ 
+    /* Azul más claro para el modo oscuro */
+    --primary: 210 100% 60%;
+    --primary-foreground: 215 28% 17%;
+ 
+    /* Elementos secundarios en modo oscuro */
+    --secondary: 215 20% 25%;
+    --secondary-foreground: 210 20% 98%;
+ 
+    /* Grises para modo oscuro */
+    --muted: 215 20% 25%;
+    --muted-foreground: 215 20% 65%;
+ 
+    /* Verde ajustado para modo oscuro */
+    --accent: 142 69% 58%;
+    --accent-foreground: 215 28% 17%;
+ 
+    /* Rojo para modo oscuro */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 20% 98%;
+ 
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 210 100% 60%;
+
+    /* Variables para gráficos en modo oscuro */
+    --chart-1: 210 100% 60%;
+    --chart-2: 142 69% 58%;
+    --chart-3: 31 81% 56%;
+    --chart-4: 262 83% 58%;
+    --chart-5: 0 85% 60%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  
+  /* Mejoras tipográficas */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 { @apply text-3xl md:text-4xl; }
+  h2 { @apply text-2xl md:text-3xl; }
+  h3 { @apply text-xl md:text-2xl; }
+  h4 { @apply text-lg md:text-xl; }
+  
+  /* Mejoras para el contenido */
+  p {
+    @apply leading-relaxed;
+  }
+  
+  /* Scrollbar personalizado */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
