@@ -20,7 +20,13 @@ export async function GET(request: NextRequest) {
     })
 
     // Convertir Decimal a number para evitar errores de serialización
-    const formattedClients = clients.map(client => ({
+    const formattedClients = clients.map((client: {
+  id: string;
+  name: string;
+  email: string;
+  creditLimit: any;
+  [key: string]: any;
+}) =>  ({
       ...client,
       creditLimit: Number(client.creditLimit)
     }))
