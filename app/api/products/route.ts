@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
     })
 
     // Convertir Decimal a number para evitar errores de serialización
-    const formattedProducts = products.map(product => ({
+    const formattedProducts = products.map((products: any) => ({
       ...product,
       price: Number(product.price),
       cost: Number(product.cost),
