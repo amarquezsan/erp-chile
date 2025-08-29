@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
    const formattedClients = clients.map((client: any) => ({
   ...client,
   creditLimit: Number(client.creditLimit)
-})),
+}))
       
 
     return NextResponse.json(formattedClients)
