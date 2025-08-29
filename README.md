@@ -1,4 +1,5 @@
-
+# ERP Chile
+Sistema ERP desarrollado para empresas chilenas
 # ERP Chile - Sistema de Gestión Empresarial
 
 Sistema ERP desarrollado específicamente para empresas chilenas con soporte completo para facturación electrónica y cumplimiento con normativas del SII.
