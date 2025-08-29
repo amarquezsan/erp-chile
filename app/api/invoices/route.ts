@@ -44,7 +44,7 @@ export async function GET(request: NextRequest) {
       subtotal: Number(invoice.subtotal),
       taxAmount: Number(invoice.taxAmount),
       total: Number(invoice.total),
-      items: invoice.items.map(item => ({
+      items: invoice.items.map((item: any) => ({
         ...item,
         quantity: Number(item.quantity),
         unitPrice: Number(item.unitPrice),
