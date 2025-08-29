@@ -39,7 +39,7 @@ export async function GET(request: NextRequest) {
     })
 
     // Convertir Decimal a number para evitar errores de serialización
-    const formattedInvoices = invoices.map(invoice => ({
+    const formattedInvoices = invoices.map((invoice: any) => ({
       ...invoice,
       subtotal: Number(invoice.subtotal),
       taxAmount: Number(invoice.taxAmount),
