@@ -35,8 +35,7 @@ if (!isValid) {
           name: user.name,
           firstName: user.firstName,
           lastName: user.lastName,
-          companyId: user.companyId || '',
-          companyName: user.company?.name || ''
+          
         }
       }
     })
