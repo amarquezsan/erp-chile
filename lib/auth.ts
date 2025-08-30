@@ -5,7 +5,6 @@ import bcrypt from 'bcryptjs'
 import { findUser, validatePassword } from '@/lib/mock-auth'
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
       name: 'credentials',
