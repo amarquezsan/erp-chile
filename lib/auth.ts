@@ -19,9 +19,7 @@ export const authOptions: NextAuthOptions = {
           return null
         }
 
-        const user = findUser(credentials.email),
-          include: { company: true }
-        })
+      const user = findUser(credentials.email)
 
         if (!user || !user.password) {
           return null
