@@ -25,8 +25,8 @@ export const authOptions: NextAuthOptions = {
 
 const isValid = validatePassword(credentials.password, user.password)
         
-        if (!passwordMatch) {
-          return null
+if (!isValid) {
+  return null
         }
 
         return {
