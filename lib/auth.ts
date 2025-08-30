@@ -1,7 +1,6 @@
 
 import { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import bcrypt from 'bcryptjs'
 import { findUser, validatePassword } from '@/lib/mock-auth'
 
